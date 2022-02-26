@@ -46,6 +46,7 @@ struct ObservationsView: View {
     
     var body: some View {
         
+        
         VStack {
             HStack(spacing: 40) {
                 
