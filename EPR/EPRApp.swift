@@ -8,13 +8,13 @@
 import SwiftUI
 
 @main
-struct EPRApp: App {
-    let persistenceController = PersistenceController.shared
 
+struct EPRApp: App {
+    let persistence = Persistence.previewFull
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environment(\.managedObjectContext, persistence.container.viewContext)
         }
     }
 }

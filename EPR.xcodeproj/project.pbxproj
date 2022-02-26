@@ -11,8 +11,15 @@
 		A2F035E427CA599500435057 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F035E327CA599500435057 /* ContentView.swift */; };
 		A2F035E627CA599900435057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F035E527CA599900435057 /* Assets.xcassets */; };
 		A2F035E927CA599900435057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F035E827CA599900435057 /* Preview Assets.xcassets */; };
-		A2F035EB27CA599900435057 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F035EA27CA599900435057 /* Persistence.swift */; };
-		A2F035EE27CA599900435057 /* EPR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2F035EC27CA599900435057 /* EPR.xcdatamodeld */; };
+		A2F035F527CA5EC000435057 /* PatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F035F427CA5EC000435057 /* PatientView.swift */; };
+		A2F035F727CA5F5E00435057 /* PatientSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F035F627CA5F5E00435057 /* PatientSummaryView.swift */; };
+		A2F035F927CA5F6800435057 /* ObservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F035F827CA5F6800435057 /* ObservationsView.swift */; };
+		A2F035FB27CA5FF400435057 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F035FA27CA5FF400435057 /* PatientModel.swift */; };
+		A2F035FE27CA602F00435057 /* CoreStore in Frameworks */ = {isa = PBXBuildFile; productRef = A2F035FD27CA602F00435057 /* CoreStore */; };
+		A2F0360227CA649600435057 /* AddPatientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360127CA649600435057 /* AddPatientView.swift */; };
+		A2F0360727CA70E500435057 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360627CA70E500435057 /* CoreData.swift */; };
+		A2F0360927CA710500435057 /* ObservationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360827CA710500435057 /* ObservationsModel.swift */; };
+		A2F0360B27CA718700435057 /* ObservationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360A27CA718700435057 /* ObservationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +28,14 @@
 		A2F035E327CA599500435057 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2F035E527CA599900435057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2F035E827CA599900435057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A2F035EA27CA599900435057 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		A2F035ED27CA599900435057 /* EPR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EPR.xcdatamodel; sourceTree = "<group>"; };
+		A2F035F427CA5EC000435057 /* PatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView.swift; sourceTree = "<group>"; };
+		A2F035F627CA5F5E00435057 /* PatientSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSummaryView.swift; sourceTree = "<group>"; };
+		A2F035F827CA5F6800435057 /* ObservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsView.swift; sourceTree = "<group>"; };
+		A2F035FA27CA5FF400435057 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
+		A2F0360127CA649600435057 /* AddPatientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatientView.swift; sourceTree = "<group>"; };
+		A2F0360627CA70E500435057 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		A2F0360827CA710500435057 /* ObservationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsModel.swift; sourceTree = "<group>"; };
+		A2F0360A27CA718700435057 /* ObservationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F035FE27CA602F00435057 /* CoreStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +71,10 @@
 			children = (
 				A2F035E127CA599500435057 /* EPRApp.swift */,
 				A2F035E327CA599500435057 /* ContentView.swift */,
+				A2F035FF27CA604100435057 /* Model */,
+				A2F0360027CA604800435057 /* View */,
+				A2F0360C27CA719800435057 /* ViewModel */,
 				A2F035E527CA599900435057 /* Assets.xcassets */,
-				A2F035EA27CA599900435057 /* Persistence.swift */,
-				A2F035EC27CA599900435057 /* EPR.xcdatamodeld */,
 				A2F035E727CA599900435057 /* Preview Content */,
 			);
 			path = EPR;
@@ -71,6 +86,35 @@
 				A2F035E827CA599900435057 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2F035FF27CA604100435057 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2F035FA27CA5FF400435057 /* PatientModel.swift */,
+				A2F0360627CA70E500435057 /* CoreData.swift */,
+				A2F0360827CA710500435057 /* ObservationsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2F0360027CA604800435057 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2F035F427CA5EC000435057 /* PatientView.swift */,
+				A2F035F627CA5F5E00435057 /* PatientSummaryView.swift */,
+				A2F035F827CA5F6800435057 /* ObservationsView.swift */,
+				A2F0360127CA649600435057 /* AddPatientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2F0360C27CA719800435057 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2F0360A27CA718700435057 /* ObservationsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +133,9 @@
 			dependencies = (
 			);
 			name = EPR;
+			packageProductDependencies = (
+				A2F035FD27CA602F00435057 /* CoreStore */,
+			);
 			productName = EPR;
 			productReference = A2F035DE27CA599500435057 /* EPR.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +164,9 @@
 				Base,
 			);
 			mainGroup = A2F035D527CA599500435057;
+			packageReferences = (
+				A2F035FC27CA602F00435057 /* XCRemoteSwiftPackageReference "CoreStore" */,
+			);
 			productRefGroup = A2F035DF27CA599500435057 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,10 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F035EB27CA599900435057 /* Persistence.swift in Sources */,
+				A2F035F527CA5EC000435057 /* PatientView.swift in Sources */,
+				A2F035FB27CA5FF400435057 /* PatientModel.swift in Sources */,
+				A2F0360227CA649600435057 /* AddPatientView.swift in Sources */,
+				A2F035F927CA5F6800435057 /* ObservationsView.swift in Sources */,
+				A2F0360727CA70E500435057 /* CoreData.swift in Sources */,
+				A2F0360927CA710500435057 /* ObservationsModel.swift in Sources */,
+				A2F035F727CA5F5E00435057 /* PatientSummaryView.swift in Sources */,
+				A2F0360B27CA718700435057 /* ObservationsViewModel.swift in Sources */,
 				A2F035E427CA599500435057 /* ContentView.swift in Sources */,
 				A2F035E227CA599500435057 /* EPRApp.swift in Sources */,
-				A2F035EE27CA599900435057 /* EPR.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,18 +406,24 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		A2F035EC27CA599900435057 /* EPR.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A2F035ED27CA599900435057 /* EPR.xcdatamodel */,
-			);
-			currentVersion = A2F035ED27CA599900435057 /* EPR.xcdatamodel */;
-			path = EPR.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		A2F035FC27CA602F00435057 /* XCRemoteSwiftPackageReference "CoreStore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnEstropia/CoreStore";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2F035FD27CA602F00435057 /* CoreStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2F035FC27CA602F00435057 /* XCRemoteSwiftPackageReference "CoreStore" */;
+			productName = CoreStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2F035D627CA599500435057 /* Project object */;
 }
