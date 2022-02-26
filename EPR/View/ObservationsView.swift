@@ -15,9 +15,9 @@ struct ObservationsView: View {
         
         VStack {
             HStack(spacing: 40) {
-                LineGraphSummaryView(title: "Heart Rate", legend: "\(viewModel.heartRateData.last!) bpm", data: viewModel.heartRateData)
-                LineGraphSummaryView(title: "Resp Rate", legend: "\(viewModel.respRateData.last!) bpm", data: viewModel.respRateData)
-                LineGraphSummaryView(title: "SpO2", legend: "\(viewModel.satsData.last!) %", data: viewModel.satsData)
+//                LineGraphSummaryView(title: "Heart Rate", legend: "\(viewModel.heartRateData.last!) bpm", data: viewModel.heartRateData)
+//                LineGraphSummaryView(title: "Resp Rate", legend: "\(viewModel.respRateData.last!) bpm", data: viewModel.respRateData)
+//                LineGraphSummaryView(title: "SpO2", legend: "\(viewModel.satsData.last!) %", data: viewModel.satsData)
             }
             .padding()
             

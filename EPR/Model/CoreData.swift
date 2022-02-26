@@ -8,6 +8,8 @@
 import SwiftUI
 import CoreData
 
+//MARK: Patient Object
+
 @objc(Patient)
 class Patient: NSManagedObject {
     @NSManaged var name: String
@@ -21,6 +23,8 @@ extension Patient: Identifiable {
         index
     }
 }
+
+//MARK: Persistence
 
 class Persistence {
     static let shared = Persistence()
