@@ -12,7 +12,7 @@ struct PatientView: View {
     @State private var selectedTab = 1
     var name: String = ""
     var age: Int = 0
-    var hospitalNumber: Int = 0
+//    var hospitalNumber: String = ""
     
     var body: some View {
         
