@@ -14,19 +14,16 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \Patient.index, ascending: true)
     ], animation: .default)
+    
     private var items: FetchedResults<Patient>
-//    private var patient = Patient()
-    
-//    @AppStorage("needsAppOnboarding") private var needsAppOnboarding: Bool = true
-    
-//    @State private var selectedTab = 1
-    //@State private var patientsDatabase: [PatientInfo] = PatientModel().patientDemoData
+
     
     var body: some View {
         
         NavigationView {
             
             List(items) { patient in
+//                Text(patient.name)
                 NavigationLink(destination: PatientView(name: patient.name, age: patient.age)) {
                     Text(patient.name)
                 }
@@ -46,8 +43,9 @@ struct ContentView: View {
         
     
 }
-
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -20,6 +20,10 @@
 		A2F0360727CA70E500435057 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360627CA70E500435057 /* CoreData.swift */; };
 		A2F0360927CA710500435057 /* ObservationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360827CA710500435057 /* ObservationsModel.swift */; };
 		A2F0360B27CA718700435057 /* ObservationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0360A27CA718700435057 /* ObservationsViewModel.swift */; };
+		A2F0360F27CA7D9C00435057 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = A2F0360E27CA7D9C00435057 /* SwiftUICharts */; };
+		A2F0361427CA853600435057 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = A2F0361327CA853600435057 /* Charts */; };
+		A2F0361627CA86BA00435057 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0361527CA86BA00435057 /* Line.swift */; };
+		A2F0361827CA9C7300435057 /* CandleStick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0361727CA9C7300435057 /* CandleStick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,8 @@
 		A2F0360627CA70E500435057 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		A2F0360827CA710500435057 /* ObservationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsModel.swift; sourceTree = "<group>"; };
 		A2F0360A27CA718700435057 /* ObservationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsViewModel.swift; sourceTree = "<group>"; };
+		A2F0361527CA86BA00435057 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		A2F0361727CA9C7300435057 /* CandleStick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2F035FE27CA602F00435057 /* CoreStore in Frameworks */,
+				A2F0361427CA853600435057 /* Charts in Frameworks */,
+				A2F0360F27CA7D9C00435057 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +79,8 @@
 			children = (
 				A2F035E127CA599500435057 /* EPRApp.swift */,
 				A2F035E327CA599500435057 /* ContentView.swift */,
+				A2F0361527CA86BA00435057 /* Line.swift */,
+				A2F0361727CA9C7300435057 /* CandleStick.swift */,
 				A2F035FF27CA604100435057 /* Model */,
 				A2F0360027CA604800435057 /* View */,
 				A2F0360C27CA719800435057 /* ViewModel */,
@@ -135,6 +145,8 @@
 			name = EPR;
 			packageProductDependencies = (
 				A2F035FD27CA602F00435057 /* CoreStore */,
+				A2F0360E27CA7D9C00435057 /* SwiftUICharts */,
+				A2F0361327CA853600435057 /* Charts */,
 			);
 			productName = EPR;
 			productReference = A2F035DE27CA599500435057 /* EPR.app */;
@@ -166,6 +178,8 @@
 			mainGroup = A2F035D527CA599500435057;
 			packageReferences = (
 				A2F035FC27CA602F00435057 /* XCRemoteSwiftPackageReference "CoreStore" */,
+				A2F0360D27CA7D9C00435057 /* XCRemoteSwiftPackageReference "ChartView" */,
+				A2F0361227CA853600435057 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = A2F035DF27CA599500435057 /* Products */;
 			projectDirPath = "";
@@ -201,6 +215,8 @@
 				A2F0360927CA710500435057 /* ObservationsModel.swift in Sources */,
 				A2F035F727CA5F5E00435057 /* PatientSummaryView.swift in Sources */,
 				A2F0360B27CA718700435057 /* ObservationsViewModel.swift in Sources */,
+				A2F0361627CA86BA00435057 /* Line.swift in Sources */,
+				A2F0361827CA9C7300435057 /* CandleStick.swift in Sources */,
 				A2F035E427CA599500435057 /* ContentView.swift in Sources */,
 				A2F035E227CA599500435057 /* EPRApp.swift in Sources */,
 			);
@@ -415,6 +431,22 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		A2F0360D27CA7D9C00435057 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.2";
+			};
+		};
+		A2F0361227CA853600435057 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -422,6 +454,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2F035FC27CA602F00435057 /* XCRemoteSwiftPackageReference "CoreStore" */;
 			productName = CoreStore;
+		};
+		A2F0360E27CA7D9C00435057 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2F0360D27CA7D9C00435057 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		A2F0361327CA853600435057 /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2F0361227CA853600435057 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

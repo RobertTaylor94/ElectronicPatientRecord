@@ -14,12 +14,13 @@ import CoreData
 class Patient: NSManagedObject {
     @NSManaged var name: String
     @NSManaged var age: Int
-    //@NSManaged var hospitalNumber: Int
+    @NSManaged var hospitalNumber: String
     @NSManaged var index: Int
+//    var uuid: UUID = UUID()
 }
 
 extension Patient: Identifiable {
-    var id: Int {
+     var id: Int {
         index
     }
 }
@@ -43,20 +44,20 @@ class Persistence {
         taskEntity.name = "Patient"
         taskEntity.managedObjectClassName = "Patient"
         
-        let attributeName = NSAttributeDescription()
-        attributeName.name = "name"
-        attributeName.type = .string
-        taskEntity.properties.append(attributeName)
+        let nameAttribute = NSAttributeDescription()
+        nameAttribute.name = "name"
+        nameAttribute.type = .string
+        taskEntity.properties.append(nameAttribute)
         
         let ageAttribute = NSAttributeDescription()
         ageAttribute.name = "age"
         ageAttribute.type = .integer64
         taskEntity.properties.append(ageAttribute)
         
-        //let hosNumAttribute = NSAttributeDescription()
-        //hosNumAttribute.name = "hospital number"
-        //hosNumAttribute.type = .integer64
-        //taskEntity.properties.append(hosNumAttribute)
+        let hosNumAttribute = NSAttributeDescription()
+        hosNumAttribute.name = "hospital number"
+        hosNumAttribute.type = .string
+        taskEntity.properties.append(hosNumAttribute)
         
         let indexAttribute = NSAttributeDescription()
         indexAttribute.name = "index"
