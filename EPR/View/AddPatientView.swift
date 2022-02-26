@@ -12,7 +12,7 @@ struct AddPatientView: View {
     
     @State var name: String = ""
     @State var age: String = ""
-    @State var hospitalNumber: Int = 1
+//    @State var hospitalNumber: String = ""
     
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -23,15 +23,9 @@ struct AddPatientView: View {
             TextField("Name", text: $name)
             TextField("Age", text: $age)
             Button("Add") {
-                let patient = Patient(context: viewContext)
-                patient.name = "\(name)"
-                patient.age = Int(age)!
-                //patient.hospitalNumber = hospitalNumber
-                let indNumber = Int.random(in: 1...5)
-                //hospitalNumber = Int.random(in: 111...999)
-                //patient.hospitalNumber = hospitalNumber
-                patient.index = indNumber
+                buildPatient()
                 saveContext()
+                print(viewContext)
             }
         }
         .padding()
@@ -45,6 +39,14 @@ extension AddPatientView {
         } catch {
             print(error)
         }
+    }
+    
+    
+    func buildPatient() {
+        let patient = Patient(context: viewContext)
+        patient.name = "\(name)"
+        patient.age = Int(age)!
+        patient.index = Int.random(in: 1...10)
     }
 }
 
