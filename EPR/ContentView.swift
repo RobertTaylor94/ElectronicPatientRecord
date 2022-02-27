@@ -12,7 +12,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \Patient.index, ascending: true)
+        NSSortDescriptor(keyPath: \Patient.name, ascending: true)
     ], animation: .default)
     
     private var items: FetchedResults<Patient>
