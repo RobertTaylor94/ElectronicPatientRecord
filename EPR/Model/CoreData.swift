@@ -25,10 +25,10 @@ class Persistence {
     static let shared = Persistence()
     
     static let previewFull: Persistence = {
-        let result = Persistence(inMemory: true)
-        let context = result.container.viewContext
+        let shared = Persistence(inMemory: true)
+        let context = shared.container.viewContext
         
-        return result
+        return shared
     }()
     
     let container: NSPersistentContainer
