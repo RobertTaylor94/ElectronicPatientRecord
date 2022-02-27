@@ -11,18 +11,12 @@ import CoreData
 //MARK: Patient Object
 
 @objc(Patient)
-class Patient: NSManagedObject {
+class Patient: NSManagedObject, Identifiable {
     @NSManaged var name: String
     @NSManaged var age: Int
     @NSManaged var hospitalNumber: String
     @NSManaged var index: Int
-//    var uuid: UUID = UUID()
-}
-
-extension Patient: Identifiable {
-     var id: Int {
-        index
-    }
+    var id = UUID()
 }
 
 //MARK: Persistence
